@@ -1,10 +1,12 @@
 import React from 'react';
 import { FcApproval } from "react-icons/fc";
+import Cleanup from './Cleanup';
 
 const Githubuser = ({users}) => {
     return (
         <>
            <h2 className="text-center">List of Github users</h2>
+           <Cleanup />
             <div className="container-fluid mt-5">
                 <div className="row text-center">
                 {
@@ -14,7 +16,7 @@ const Githubuser = ({users}) => {
                         <div className="col-10 col-md-4 mt-5" key={ id }>
                         <div className="card p-2">
                             <div className="d-flex align-items-center">
-                            <div className="image"> <img src={ avatar_url } className="rounded" width="155" /> </div>
+                            <div className="image"> <img src={ avatar_url } alt="github" className="rounded" width="155" /> </div>
                             <div className="ml-3 w-100">
                                 <h4 className="mb-0 mt-0 textLeft">{ login } <FcApproval /> </h4>
                                 <span className="text-left">{ type }</span>
